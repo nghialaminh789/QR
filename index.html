@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Business Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="content-profileID">
+        <header>
+            <nav>
+                <div class="menu">
+                    <button class="menu-item" onclick="showSection('profile')">Trang Chủ</button>
+                    <button class="menu-item" onclick="showSection('about')">Giới Thiệu</button>
+                    <button class="menu-item" onclick="showSection('photos')">Ảnh</button>
+                    <button class="menu-item" onclick="showSection('videos')">Video</button>
+                    <button class="menu-item" onclick="showSection('shop')">Shop</button>
+                    <button class="menu-item" onclick="showSection('news')">Tin Tức</button>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            <section id="profile" class="content-section">
+                <div class="profile-content">
+                    <div class="center"><img class="profile-image" src="./image/person.jpg"></div>
+                    <div class="profile-name">Mít Tơ Tèo</div>
+                    <div class="profile-sub">Chức vụ: FrontEnd Developer</div>
+                    <div class="profile-sub">Phòng IT</div>
+                    <div class="center">
+                        <div class="profile-dowload">
+                            <i class="fa-sharp fa-solid fa-download"></i>
+                            <div>Lưu Danh Bạ</div>
+                        </div>
+                        <div class="profile-dowload">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>Để Lại Lời Nhắn</div>
+                        </div>
+                    </div>
+    
+                    <div class="apps">
+                        <div onclick="callPhone(+84988459742)">
+                            <div class="profile-phone"><i class="fa-solid fa-phone"></i></div>
+                            <div class="app-title">Phone</div>
+                        </div>
+                        <div>
+                            <div class="profile-phone"><i class="fa-brands fa-line"></i></div>
+                            <div class="app-title">Line</div>
+                        </div>
+                        <div>
+                            <div class="profile-phone"><i class="fa-solid fa-camera"></i></div>
+                            <div class="app-title">Camera</div>
+                        </div>
+                        <div>
+                            <div class="profile-phone"><i class="fa-solid fa-file"></i></div>
+    
+                            <div class="app-title">file</div>
+                        </div>
+                        <div>
+                            <div class="profile-phone"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="app-title">Map</div>
+                        </div>
+                        <div>
+                            <div class="profile-phone"><i class="fa-solid fa-image"></i></div>
+                            <div class="app-title">image</div>
+                        </div>
+                        <div>
+                            <div class="profile-phone"><i class="fa-brands fa-instagram"></i></div>
+    
+                            <div class="app-title">Instagram</div>
+                        </div>
+                        <div>
+                            <div class="profile-phone"><i class="fa-sharp fa-solid fa-comment-dots"></i></div>
+    
+                            <div class="app-title">SMS</div>
+                        </div>
+                        <div>
+                            <div class="profile-phone"><i class="fa-brands fa-google"></i></div>
+    
+                            <div class="app-title">Google </div>
+                        </div>
+                        <div>
+                            <div class="profile-phone"><i class="fa-brands fa-whatsapp"></i></div>
+    
+                            <div class="app-title">WhatsApp</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="about" class="content-section">
+                <p>Vui lòng lòng giới thiệu về thông tin <b>cá nhân</b> hoặc <b>doanh nghiệp</b> của bạn tại đây để hiển thị
+                    thẻ.</p>
+            </section>
+    
+            <section id="photos" class="content-section">
+                <input type="file" id="photo1">
+                <input type="file" id="photo2">
+                <input type="file" id="photo3">
+                <input type="file" id="photo4">
+            </section>
+    
+            </section>
+    
+            <section id="shop" class="content-section">
+                <input type="file" id="shop-photo1">
+                <input type="file" id="shop-photo2">
+                <input type="file" id="shop-photo3">
+                <input type="file" id="shop-photo4">
+            </section>
+    
+            <section id="news" class="content-section">
+                <input type="url" id="news-link" placeholder="Chèn link status bài báo">
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
