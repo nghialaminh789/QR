@@ -1,12 +1,12 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-   justify-content: center;
+    justify-content: center;
 }
 
-.content-profileID{
-   margin: auto;
-   width: 500px;
+.content-profileID {
+    margin: auto;
+    width: 500px;
 }
 
 header {
@@ -34,36 +34,36 @@ header {
     align-items: center;
 }
 
-.menu{
+.menu {
     display: flex;
 }
 
-.menu-item{
+.menu-item {
     font-size: 18px;
     padding: 5px;
     font-weight: 700;
     color: #000000;
     cursor: pointer;
     border: none;
-    margin: 0px 2px
+    margin: 0px 2px;
 }
 
-.menu-item:hover{
+.menu-item:hover {
     background: #3959db;
-    color: white
+    color: white;
 }
 
-.active{
+.active {
     background: #3959db;
-    color: white
+    color: white;
 }
 
-.content-section, .center{
+.content-section, .center {
     display: flex;
     justify-content: center;
 }
 
-.profile-image{
+.profile-image {
     height: 150px;
     width: 150px;
     border: 5px solid #3959db;
@@ -71,7 +71,7 @@ header {
     margin-top: 30px;
 }
 
-.profile-name{
+.profile-name {
     font-weight: 700;
     color: #000000;
     font-size: 20px;
@@ -79,7 +79,7 @@ header {
     margin-top: 7px;
 }
 
-.profile-sub{
+.profile-sub {
     font-weight: 400;
     color: #000000;
     font-size: 16px;
@@ -87,7 +87,7 @@ header {
     margin-top: 7px;
 }
 
-.profile-dowload{
+.profile-dowload {
     background: #3959db;
     padding: 10px;
     display: flex;
@@ -100,22 +100,19 @@ header {
     font-weight: 700;
 }
 
-.profile-dowload div{
+.profile-dowload div {
     margin-left: 5px;
 }
 
-
-
-.apps{
+.apps {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
     gap: 20px 40px;
-   justify-content: center;
+    justify-content: center;
 }
 
-.profile-phone{
-    background: #33cc33;
+.profile-phone {
     width: 60px;
     height: 60px;
     border-radius: 5px;
@@ -124,14 +121,54 @@ header {
     align-items: center;
 }
 
-.profile-phone i{
+.profile-phone i {
     font-size: 28px;
     color: white;
 }
 
-.app-title{
+.app-title {
     font-size: 16px;
     margin-top: 10px;
     color: gray;
 }
 
+/* Màu sắc cụ thể cho từng ứng dụng */
+.profile-phone.phone {
+    background: #4CAF50; /* Màu xanh lá cho Phone */
+}
+
+.profile-phone.line {
+    background: #00C300; /* Màu xanh lá cây cho Line */
+}
+
+.profile-phone.camera {
+    background: #FF5722; /* Màu cam cho Camera */
+}
+
+.profile-phone.file {
+    background: #607D8B; /* Màu xám cho File */
+}
+
+.profile-phone.map {
+    background: #3F51B5; /* Màu xanh dương cho Map */
+}
+
+.profile-phone.image {
+    background: #9C27B0; /* Màu tím cho Image */
+}
+
+.profile-phone.instagram {
+    background: #E4405F; /* Màu hồng cho Instagram */
+}
+
+.profile-phone.sms {
+    background: #FFEB3B; /* Màu vàng cho SMS */
+}
+
+.profile-phone.google {
+    background: #4285F4; /* Màu xanh dương cho Google */
+}
+
+.profile-phone.whatsapp {
+    background: #25D366; /* Màu xanh lá cây cho WhatsApp */
+}
