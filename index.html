@@ -7,7 +7,6 @@
     <title>Danh Thiếp Thông Minh</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Liên Hệ Điện Thoại</title>
     <style>
         .phone-number {
             display: none;
@@ -17,7 +16,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 20px; /* Thêm khoảng cách giữa các mục */
+            margin-bottom: 20px;
         }
 
         nav {
@@ -44,7 +43,6 @@
         
     </style>
 
-    <title>Liên Kết Google</title>
     <style>
         .link-container a {
             text-decoration: none;
@@ -68,7 +66,7 @@
             <section id="profile" class="content-section">
                 <div class="profile-content">
                     <div class="center"><img class="profile-image" src="./image/person.jpg"></div>
-                    <div class="profile-name">Nguyễn Văn Sang</div>
+                    <div class="profile-name">Dương Nghĩa</div>
                     <div class="profile-sub">FrontEnd Developer</div>
                     <div class="profile-sub">Công ty TNHH TaaNakk</div>
                     <div class="center">
@@ -104,25 +102,25 @@
                             }
                         </script>
                         
-                        <div class="app-item">
+                        <div class="app-item map">
                             <div class="profile-phone map">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div class="app-title">Bản Đồ</div>
                         </div>
-                        <div class="app-item">
+                        <div class="app-item share">
                             <div class="profile-phone share">
                                 <i class="fa-solid fa-share"></i>
                             </div>
                             <div class="app-title">Chia sẻ</div>
                         </div>
-                        <div class="app-item">
+                        <div class="app-item email">
                             <div class="profile-phone email">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div class="app-title">Email</div>
                         </div>
-                        <div class="app-item">
+                        <div class="app-item sms">
                             <div class="profile-phone sms">
                                 <i class="fa-sharp fa-solid fa-comment-dots"></i>
                             </div>
@@ -138,9 +136,44 @@
                     </div>
                 </div>
             </section>
+            <section id="map" class="content-section">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.056606999442!2d144.96315781531662!3d-37.81410777975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727e0c61b0df5d!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1648541682933!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </section>
     </div>
 
     <script>
+        const menu = ["profile", "map"];
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll(".content-section");
+            sections.forEach((section) => {
+                section.style.display = "none";
+            });
+            document.getElementById(sectionId).style.display = "flex";
+            activeMenu(sectionId);
+        }
+
+        function activeMenu(sectionId = "profile") {
+            const menu_item = document.querySelectorAll(".menu-item");
+            const index = menu.indexOf(sectionId);
+            menu_item.forEach((item) => {
+                {
+                    item.classList.remove("active");
+                }
+            });
+            if (menu_item && index !== -1) {
+                menu_item[index].classList.add("active");
+            } else {
+                menu_item[0].classList.add("active");
+            }
+        }
+
+        function callPhone(value) {
+            window.open(`tel:${value}`, '_self');
+        }
+
         function showPhoneNumber() {
             var phoneNumber = document.getElementById("phone-number");
             if (phoneNumber.style.display === "none" || phoneNumber.style.display === "") {
@@ -149,6 +182,47 @@
                 phoneNumber.style.display = "none";
             }
         }
+
+        function openYouTube() {
+            window.open("https://www.youtube.com/", "_blank");
+        }
+
+        function showMap() {
+            showSection('map');
+        }
+
+        function shareProfile() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Danh Thiếp Thông Minh',
+                    text: 'Hãy kiểm tra danh thiếp thông minh của tôi!',
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch((error) => {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                alert('Trình duyệt của bạn không hỗ trợ chức năng chia sẻ này.');
+            }
+        }
+
+        function openEmail() {
+            window.open('mailto:nghialaminh789@gmail.com', '_self');
+        }
+
+        function sendSMS() {
+            window.open('sms:+84382296309', '_self');
+        }
+
+        // Thêm sự kiện onclick vào phần tử app-item cho bản đồ, chia sẻ, email, và tin nhắn
+        document.querySelector('.app-item.map').onclick = showMap;
+        document.querySelector('.app-item.share').onclick = shareProfile;
+        document.querySelector('.app-item.email').onclick = openEmail;
+        document.querySelector('.app-item.sms').onclick = sendSMS;
+
+        showSection('profile');
+        activeMenu("profile");
     </script>
 </body>
 

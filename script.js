@@ -30,3 +30,27 @@ function callPhone (value){
 
 showSection('profile');
 activeMenu("profile");
+function shareProfile() {
+  if (navigator.share) {
+      navigator.share({
+          title: 'Danh Thiếp Thông Minh',
+          text: 'Hãy kiểm tra danh thiếp thông minh của tôi!',
+          url: window.location.href
+      }).then(() => {
+          console.log('Thanks for sharing!');
+      }).catch((error) => {
+          console.error('Error sharing:', error);
+      });
+  } else {
+      alert('Trình duyệt của bạn không hỗ trợ chức năng chia sẻ này.');
+  }
+}
+
+// Thêm sự kiện onclick vào phần tử app-item cho chia sẻ
+document.querySelector('.app-item.share').onclick = shareProfile;
+function sendSMS() {
+  window.open('sms:+84382296309', '_self');
+}
+
+// Thêm sự kiện onclick vào phần tử app-item cho tin nhắn
+document.querySelector('.app-item.sms').onclick = sendSMS;

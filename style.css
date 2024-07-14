@@ -137,17 +137,11 @@ header {
     background: #4CAF50; /* Màu xanh lá cho Phone */
 }
 
-.profile-phone.line {
-    background: #00C300; /* Màu xanh lá cây cho Line */
-}
 
 .profile-phone.youtube {
     background: #ff2222; /* Màu đỏ cho Youtube */
 }
 
-.profile-phone.website {
-    background: #33058a; /* Màu xanh dương đậm cho Website */
-}
 
 .profile-phone.map {
     background: #3F51B5; /* Màu xanh dương cho Map */
@@ -169,6 +163,3 @@ header {
     background: #4285F4; /* Màu xanh dương cho Google */
 }
 
-.profile-phone.whatsapp {
-    background: #25D366; /* Màu xanh lá cây cho WhatsApp */
-}
