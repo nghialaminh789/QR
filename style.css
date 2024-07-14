@@ -141,24 +141,24 @@ header {
     background: #00C300; /* Màu xanh lá cây cho Line */
 }
 
-.profile-phone.camera {
-    background: #FF5722; /* Màu cam cho Camera */
+.profile-phone.youtube {
+    background: #ff2222; /* Màu đỏ cho Youtube */
 }
 
-.profile-phone.file {
-    background: #607D8B; /* Màu xám cho File */
+.profile-phone.website {
+    background: #33058a; /* Màu xanh dương đậm cho Website */
 }
 
 .profile-phone.map {
     background: #3F51B5; /* Màu xanh dương cho Map */
 }
 
-.profile-phone.image {
-    background: #9C27B0; /* Màu tím cho Image */
+.profile-phone.share {
+    background: #1361a5; /* Màu lam cho share */
 }
 
-.profile-phone.instagram {
-    background: #E4405F; /* Màu hồng cho Instagram */
+.profile-phone.email {
+    background: #E4405F; /* Màu hồng cho email */
 }
 
 .profile-phone.sms {
